@@ -1,0 +1,102 @@
+{
+  "name": "Rasputchabr",
+  "description": "O ADM de grupo mais atrevido do Telegram.",
+  "logo": "https://telegra.ph/file/764d0303185e2b440d613.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/kyourakudono/Rasputcha-BR",
+  "env": {
+    "ENV": {
+      "description": "Definir isso como QUALQUER COISA ativará as variáveis de ambiente. Mas, você precisa entender o código para saber o que definir aqui!",
+      "value": "NADA"
+    },
+    "TOKEN": {
+      "description": "5240058560:AAEPWrUw6wFbCM3TEX7G10ZEvL1bw3EKGLU"
+    },
+    "OWNER_ID": {
+      "description": "Um número inteiro de consistindo em seu ID de proprietário",
+      "value": "5185792776"
+    },
+    "OWNER_USERNAME": {
+      "description": "Your username",
+      "value": "VanDeafining"
+    },
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
+      "value": "ANYTHING"
+    },
+    "URL": {
+      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/"
+    },
+    "MESSAGE_DUMP": {
+      "description": "opcional: um bate-papo onde suas mensagens salvas respondidas são armazenadas, para impedir que as pessoas excluam suas antigas",
+      "required": false
+    },
+    "SUDO_USERS": {
+      "description": "Uma lista separada por espaços de user_ids que devem ser considerados usuários sudo",
+      "value": "5185792776 "
+    },
+    "SUPPORT_USERS": {
+      "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
+      "value": "5185792776 "
+    },
+    "WHITELIST_USERS": {
+      "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
+      "value": "5185792776 "
+    },
+    "DONATION_LINK": {
+      "description": "Doações.",
+      "value": "https://www.paypal.me/kyourakudono"
+    },
+    "PORT": {
+      "description": "Port to use for your webhooks",
+      "value": "8443"
+    },
+    "DEL_CMDS": {
+      "description": "Whether to delete commands from users which don't have rights to use that command",
+      "value": "True"
+    },
+    "STRICT_GBAN": {
+      "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+      "value": "True"
+    },
+    "ALLOW_EXCL": {
+      "description": "Whether to allow using exclamation marks ! for commands as well as /.",
+      "value": "True"
+    },
+    "BAN_STICKER": {
+      "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
+      "value": "CAADBQADfQADv7rGI0wxx1ORU7UzAg",
+      "required": false
+    },
+    "BMERNU_SCUT_SRELFTI": {
+      "description": "please set this value as 0",
+      "value": "1",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "stack": "heroku-20",
+  "buildpacks": [],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
